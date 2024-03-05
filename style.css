@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root{
+    --Soft-red: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    Font-size: 18px;
+    background-color: var(--Cream);
+    display: grid;
+    height: 100vh;
+    overflow-x: hidden;
+    place-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.header{
+    background-color: var(--Soft-red);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+.content-main{
+    max-width: 470px;
+    color: var(--Dark-brown);
+    background-color: var(--Very-pale-orange);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.content-main .chart{
+    display: flex;
+    color: var(--Medium-brown);
+    align-items: flex-end;
+    gap: 10px;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px var(--Medium-brown) solid;
+}
+
+.bar{
+    background: var(--Soft-red);
+    width: 45px;
+    margin: 0 2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bar:hover{
+    opacity: 0.8;
+}
+
+.chart-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.chart-item .spend{
+    position: relative;
+    opacity: 1;
+    display: none;
+    top: -10px;
+    background-color: var(--Dark-brown);
+    color: var(--Very-pale-orange);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.chart-item:hover .spend{
+    display: block;
+}
+
+.chart-item p{
+    font-size: 0.9rem;
+}
+
+#wed {
+    background-color: var(--Cyan) !important;
+}
+
+.content-main .outcome{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.outcome .present p{
+    color: var(--Medium-brown);
+    font-size: 1rem;
+}
+
+.outcome .present h3{
+ font-size: 2rem;
+}
+
+.outcome .last{
+    display: flex;
+    flex-direction: column;
+}
+
+.outcome .last h4{
+    font-size: 1.2rem;
+    align-self: flex-end;
+}
+
+.outcome .last p{
+    color: var(--Medium-brown);
+    font-size: 1rem;
+}
