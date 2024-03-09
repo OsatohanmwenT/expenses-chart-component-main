@@ -1,7 +1,7 @@
 var chart = document.querySelector('.chart');
 
 async function fetchArray() {
-    let response = await fetch("http://127.0.0.1:5500/expenses-chart-component-main/data.json");
+    let response = await fetch("data.json");
     let data = await response.json();
     console.log(data);
 
